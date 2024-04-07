@@ -1,0 +1,94 @@
+﻿html {
+	position: fixed;
+	overflow: hidden;
+	background-color: #fff;
+	color: #202020;
+	line-height: 1
+}
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, pre, a, img, small, strike, strong, b, u, i, center, ol, ul, li, footer, header, menu, nav, section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline
+}
+
+html, body, main {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%
+}
+
+header {
+	position: sticky;
+	padding: 4.5rem;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 3
+}
+
+header nav{
+	display: flex;
+	align-items: center;
+}
+
+header a{
+	width: 3rem;
+}
+
+header .navbar-brand {
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+header .navbar-brand .logo {
+	display: block;
+	width: 350px;
+}
+
+header .navbar-brand .logo svg {
+	width: 100%
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-content: center;
+}
+
+footer {
+	position: fixed;
+	padding: 4.5rem;
+	right: 0;
+	bottom: 0;
+	left: 0
+}
+
+table {
+	width: 100%;
+	padding: 5rem;
+}
+
+h1{
+	text-align:right;
+	font-size: 5rem;
+}
+
+h2 {
+	font-size: 3rem;
+}
+
+td div {
+	font-size: 1.5rem;
+	text-align: justify;
+}
+
+td {
+	padding: 4.5rem;
+}
