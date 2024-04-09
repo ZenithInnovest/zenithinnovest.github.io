@@ -35,8 +35,17 @@ header nav{
 	align-items: center;
 }
 
-header a{
+header a {
 	width: 3rem;
+	color: #202020;
+}
+
+a:hover {
+	color: currentColor;
+}
+
+a:visited {
+	color: currentColor
 }
 
 header .navbar-brand {
@@ -67,7 +76,7 @@ footer {
 	padding: 4.5rem;
 	right: 0;
 	bottom: 0;
-	left: 0
+	left: 0;
 }
 
 table {
