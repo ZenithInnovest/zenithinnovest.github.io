@@ -1,4 +1,6 @@
-﻿html {
+﻿@import"https://fonts.googleapis.com/css?family=Junge:wght@300;600&display=swap";
+
+html {
 	position: fixed;
 	overflow: hidden;
 	background-color: #fff;
@@ -21,6 +23,11 @@ html, body, main {
 	width: 100%
 }
 
+body {
+	font-family: Garamond, serif;
+	line-height: 1
+}
+
 header {
 	position: sticky;
 	padding: 4.5rem;
@@ -36,8 +43,12 @@ header nav{
 }
 
 header a {
-	width: 3rem;
 	color: #202020;
+	font-family: "Junge",serif;
+	font-size: 1.3rem;
+	padding: 1rem;
+	text-decoration-thickness: from-font;
+	text-underline-offset: 0.5rem;
 }
 
 a:hover {
@@ -57,7 +68,7 @@ header .navbar-brand {
 
 header .navbar-brand .logo {
 	display: block;
-	width: 350px;
+	width: 400px;
 }
 
 header .navbar-brand .logo svg {
@@ -77,6 +88,7 @@ footer {
 	right: 0;
 	bottom: 0;
 	left: 0;
+	font-size: 0.7rem;
 }
 
 table {
@@ -84,12 +96,14 @@ table {
 	padding: 5rem;
 }
 
-h1{
-	text-align:right;
+h1 {
+	text-align: right;
+	font-family: "Junge",serif;
 	font-size: 5rem;
 }
 
 h2 {
+	font-family: "Junge",serif;
 	font-size: 3rem;
 }
 
