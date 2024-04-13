@@ -1,117 +1,103 @@
 ﻿@import"https://fonts.googleapis.com/css?family=Junge:wght@300;600&display=swap";
 
+/* General Styles */
 html {
-	position: fixed;
-	overflow: hidden;
 	background-color: #fff;
 	color: #202020;
-	line-height: 1
 }
 
 html, body, div, span, h1, h2, h3, h4, h5, h6, p, pre, a, img, small, strike, strong, b, u, i, center, ol, ul, li, footer, header, menu, nav, section {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	vertical-align: baseline
+	vertical-align: baseline;
 }
 
-html, body, main {
+html, body {
 	position: absolute;
 	top: 0;
 	left: 0;
 	height: 100%;
-	width: 100%
+	width: 100%;
 }
 
 body {
 	font-family: Garamond, serif;
-	line-height: 1
+	margin: 0;
+	padding: 0;
 }
 
+/* Header Styles */
 header {
-	position: sticky;
-	padding: 4.5rem;
-	top: 0;
-	right: 0;
-	left: 0;
-	z-index: 3
+	padding: 1rem;
+	font-size: 1.5rem;
 }
 
-header nav{
+header .navbar-brand {
+	display: inline-block;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 44px;
+}
+
+nav {
 	display: flex;
 	align-items: center;
 }
 
-header a {
+nav a {
 	color: #202020;
-	font-family: "Junge",serif;
-	font-size: 1.3rem;
-	padding: 1rem;
+	font-family: "Junge", serif;
+	padding: 0.625rem;
 	text-decoration-thickness: from-font;
 	text-underline-offset: 0.5rem;
 }
 
-a:hover {
-	color: currentColor;
+nav a img {
+	height: 44px;
 }
 
-a:visited {
-	color: currentColor
-}
-
-header .navbar-brand {
-	position: absolute;
-	left: 50%;
-	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%);
-}
-
-header .navbar-brand .logo {
-	display: block;
-	width: 400px;
-}
-
-header .navbar-brand .logo svg {
-	width: 100%
-}
-
+/* Main Styles */
 main {
 	display: flex;
 	justify-content: center;
-	flex-wrap: wrap;
-	align-content: center;
+	align-items: center;
+	min-height: calc(100vh - 165px);
 }
 
-footer {
-	position: fixed;
-	padding: 4.5rem;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	font-size: 0.7rem;
-}
-
-table {
+.zi_Name {
 	width: 100%;
-	padding: 5rem;
+	max-width: 829px;
 }
 
-h1 {
-	text-align: right;
-	font-family: "Junge",serif;
-	font-size: 5rem;
+section {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	max-width: 800px;
 }
 
-h2 {
-	font-family: "Junge",serif;
-	font-size: 3rem;
+.content {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 1rem;
 }
 
-td div {
-	font-size: 1.5rem;
+.content h2 {
+	font-family: "Junge", serif;
+	flex: 1 1 50%;
+}
+
+.content p {
 	text-align: justify;
+	flex: 1 1 50%;
 }
 
-td {
-	padding: 4.5rem;
+/* Footer Styles */
+footer {
+	padding: 1rem;
+	padding-top: 3rem;
+	font-size: 0.875rem;
 }
