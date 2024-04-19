@@ -6,6 +6,8 @@
 
 	<title>Performance - Zenith Innovest</title>
 
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 	<link rel="icon" href="Includes/images/zenithInnovestLogo.png" type="image/icon type">
 	<link rel='stylesheet' id='style-css' href='Includes/css/style.css' type='text/css' media='all' />
 </head>
@@ -29,9 +31,7 @@
 					<h2>Backtesting Results</h2>
 					<p>Our rigorous backtesting process involves subjecting our trading strategies to historical market data, allowing us to assess their performance and effectiveness in simulated market conditions. Through meticulous analysis and evaluation, we've refined our strategies to deliver consistent results and maximize returns. Our backtesting results provide valuable insights into the robustness and reliability of our machine learning algorithms.</p>
 					<br />
-					<div style="text-align: center; font-size: small;">
-						The graph showing backtesting results will be here.
-					</div>
+					<canvas id="backTestingChart"></canvas>
 				</div>
 			</section>
 
@@ -51,5 +51,7 @@
 	<footer>
 		<p>&copy; 2024 Zenith Innovest. All Rights Reserved.</p>
 	</footer>
+
+	<script src="Includes/js/charts.js"></script>
 </body>
 </html>
