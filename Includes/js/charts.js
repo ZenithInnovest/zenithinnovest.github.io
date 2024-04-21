@@ -6,7 +6,7 @@ const Model_Return_BT = [5012.5, 5025.03, 5025.03, 5037.59, 5050.19, 5062.81, 50
 const backTestingData = {
     labels: Dates_BT,
     datasets: [{
-        label: 'Zenith Innovest Machine Learning Model Return',
+        label: 'Zenith Innovest Return',
         data: Model_Return_BT,
         borderColor: 'blue',
         borderWidth: 2,
@@ -30,7 +30,7 @@ const Model_Return_HR = [5012.43, 5024.83, 5101.76, 5114.33, 5133.16, 5146.43, 5
 const historicalResultsData = {
     labels: Dates_HR,
     datasets: [{
-        label: 'Zenith Innovest Machine Learning Model Return',
+        label: 'Zenith Innovest Return',
         data: Model_Return_HR,
         borderColor: 'green',
         borderWidth: 2,
@@ -51,6 +51,10 @@ const chartOptions = {
     responsive: true,
     scales: {
         x: {
+            type: 'time',
+            time: {
+                unit: 'year'
+			},
             display: true,
             scaleLabel: {
                 display: true
@@ -66,7 +70,14 @@ const chartOptions = {
     plugins: {
         tooltip: {
             mode: 'index',
-            intersect: false
+            intersect: false,
+            callbacks: {
+                title: context => {
+                    const date = new Date(context[0].parsed.x);
+                    const formattedDate = date.toLocaleString([], { dateStyle: 'long'});
+                    return formattedDate;
+				}
+			}
         }
     },
     hover: {
@@ -82,6 +93,7 @@ const backTestingChart = new Chart(document.getElementById('backTestingChart').g
     options: chartOptions
 });
 
+chartOptions.scales.x.time.unit = 'day';
 const historicalResultsChart = new Chart(document.getElementById('historicalResultsChart').getContext('2d'), {
     type: 'line',
     data: historicalResultsData,
